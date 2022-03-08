@@ -235,4 +235,59 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
+    
+/*******Opcion 4: solo un objeto onClick implementando la clase View.OnClickListener********/
+    
+//activity_main.xml
+    
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnBoton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button1"
+        android:layout_gravity="center" />
+
+</LinearLayout>
+    
+    
+//MainActivity.java
+    
+package com.example.seccion1app;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    Button Boton1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Boton1 = findViewById(R.id.btnBoton1);
+        Boton1.setOnClickListener(this);
+
+   }
+
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(this, "Presionando botón 1", Toast.LENGTH_SHORT).show();
+    }
+}
+    
 
