@@ -1,6 +1,6 @@
 
 
-/*******Opcion 1: multiples objetos onClick usando condicional if********/
+/*******Opcion 1: Multiples objetos onClick usando condicional if********/
 
 //activity_main.xml
 <?xml version="1.0" encoding="utf-8"?>
